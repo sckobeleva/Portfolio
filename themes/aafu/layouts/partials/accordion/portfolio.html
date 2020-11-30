@@ -1,0 +1,129 @@
+{{ range.Site.Params.portfolio.list }}
+<dl>
+  
+  <dd class="mb-0">
+    <span class="markdownify">{{ .dates1 | markdownify }}</span>
+    <!--&middot;-->
+    {{ if .link1 }}
+
+    <a href="{{ .link }}">{{ .company1 }}</a>
+    {{ else }}
+    {{ .company1 }}
+    {{ end }}
+  <dt class="mb-0">
+    {{ .position1 }}
+  </dt>  
+  </dd>
+  <dd class="mb-0 ml-2 markdownify">{{ .details1 | markdownify }}</dd>
+</dl>
+{{ end }}
+
+
+<!-- 
+{{ if .Site.Params.portfolio.types }}
+{{ range.Site.Params.portfolio.types }}
+{{ $type := . }}
+<h5 style="text-decoration: none;">{{ $type }}</h5>
+{{- range $.Site.Params.portfolio.list -}}
+{{ if eq $type .type }}
+{{- $this_portfolio := . -}}
+<dl>
+  <dt>
+    {{- range $.Site.Params.portfolio.format -}}
+    {{- partial "accordion/supportingPartials/addTitle" (dict "all" $this_portfolio "ind" .) -}}
+    {{- end -}}
+  </dt>
+  <dd class="mb-0 ml-2 markdownify">
+    {{- .description | markdownify -}}
+  </dd>
+</dl>
+{{ end }}
+{{- end -}}
+{{ end }}
+
+{{ else }}
+
+{{- range $.Site.Params.portfolio.list -}}
+{{- $this_portfolio := . -}}
+<p>
+  {{- range $.Site.Params.portfolio.format -}}
+  {{- partial "addTitle" (dict "all" $this_portfolio "ind" .) -}}
+  {{- end -}}
+</p>
+{{ end }}
+{{ end }} -->
+
+<!-- {{ if .Site.Params.portfolio.types }}
+{{ range.Site.Params.portfolio.types }}
+{{ $type := . }}
+<h4 style="text-decoration: underline;">{{ $type }}</h4>
+{{- range $.Site.Params.portfolio.list -}}
+{{ if eq $type .type }}
+{{- $this_portfolio := . -}}
+<p>
+  {{- range $.Site.Params.portfolio.format -}}
+  {{- partial "accordion/supportingPartials/addTitle" (dict "all" $this_portfolio "ind" .) -}}
+  {{- end -}}
+  {{- .description | markdownify -}}
+</p>
+{{ end }}
+{{- end -}}
+{{ end }}
+
+{{ else }}
+
+{{- range $.Site.Params.portfolio.list -}}
+{{- $this_portfolio := . -}}
+<p>
+  {{- range $.Site.Params.portfolio.format -}}
+  {{- partial "addTitle" (dict "all" $this_portfolio "ind" .) -}}
+  {{- end -}}
+</p>
+{{ end }}
+{{ end }} -->
+
+
+<!-- <dl>
+  {{ range.Site.Params.portfolio.list }}
+  <dt>
+    {{ if .url }}
+    <a href="{{ .url }}">
+      {{- .title -}}
+    </a>
+    {{ else }}
+    {{- .title -}}
+    {{ end }}
+  </dt>
+  <dd class="mb-0 ml-2 markdownify">
+    {{- .description | markdownify -}}
+  </dd>
+  {{ end }}
+</dl> -->
+
+
+<!-- {{ range.Site.Params.portfolio.types }}
+{{ $type := . }}
+<h5 style="text-decoration: none;">{{ $type }}</h5>
+{{- range $.Site.Params.portfolio.list -}}
+{{ if eq $type .type }}
+{{- $this_portfolio := . -}}
+<dl>
+  {{ range.Site.Params.portfolio.list }}
+  <dt>
+    {{- partial "accordion/supportingPartials/addTitle" (dict "all" $this_portfolio "ind" .) -}}
+    {{ if .url }}
+    <a href="{{ .url }}">
+      {{- .title -}}
+    </a>
+    {{ else }}
+    {{- .title -}}
+    {{ end }}
+  </dt>
+  <dd class="mb-0 ml-2 markdownify">
+    {{- .description | markdownify -}}
+  </dd>
+  {{ end }}
+</dl>
+{{ end }}
+{{ end }}
+{{ end }} -->

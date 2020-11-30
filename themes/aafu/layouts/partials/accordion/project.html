@@ -1,0 +1,34 @@
+{{ range .Site.Params.project.list }}
+<dl>
+  <dt>{{ .dates2 }} &middot; {{ .college2 }}</dt>
+  <dd class="mb-0 ml-3">{{ .degree2 }}</dd>
+  <dd class="mb-0 ml-4">{{ .code2 }} <!--&middot;--> {{ .spec2 }}</dd>
+  {{ if .thesis_link2 }}
+  <dd class="mb-0 ml-4">
+    Сертификат:
+    <a href="{{ .thesis_link2 }}"
+      ><i>{{ .thesis_title2 }}</i></a
+    >
+  </dd>
+  {{ end }}
+</dl>
+{{ end }}
+
+
+
+<!-- <dl>
+  {{ range.Site.Params.project.list }}
+  <dt>
+    {{ if .url }}
+    <a href="{{ .url }}">
+      {{- .title -}}
+    </a>
+    {{ else }}
+    {{- .title -}}
+    {{ end }}
+  </dt>
+  <dd class="mb-0 ml-2 markdownify">
+    {{- .description | markdownify -}}
+  </dd>
+  {{ end }}
+</dl> -->

@@ -1,0 +1,392 @@
+baseURL = "https://fish-train.github.io/portfolio/"
+languageCode = "en-us"
+title = "My Portfolio"
+theme = "aafu"
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
+[params]
+    title = "Анастасия Скобелева"
+    author = "Анастасия Скобелева"
+    description = "Резюме"
+    # copyright = ""
+
+    [params.theme]
+        # Available themes are 'light', 'dark', 'pinkish', 'green' and 'nastya'
+        mainTheme = "pinkish"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = false
+        singlePage = true
+
+    [params.favicons]
+        use = false
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Анастасия Скобелева"
+		tagline = "Инженер по тестированию"
+		location = "Ижевск, Российская Федерация"
+        photo = "profile.jpg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-telegram"
+            url = "https://t.me/sckobeleva"
+            title = "Telegram"
+        [[params.social.list]]
+            class = "fas"
+            icon = "fa-envelope-square"
+            url = "mailto:sckobeleva@mail.ru"
+            title = "email"
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-github"
+            url = "https://github.com/sckobeleva?tab=repositories"
+            title = "GitHub"
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-linkedin-in"
+            url = "https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F-%D1%81%D0%BA%D0%BE%D0%B1%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0-969211a8/"
+            title = "LinkedIn"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "experience"
+    [[params.showInAccordion]]
+        item = "portfolio"
+    [[params.showInAccordion]]
+        item = "project"
+    [[params.showInAccordion]]
+        item = "publication"
+    [[params.showInAccordion]]
+        item = "education"
+    [[params.showInAccordion]]
+        item = "skill"
+    [[params.showInAccordion]]
+        item = "hobby"
+
+    [params.aboutme]
+        title = "Обо мне"
+        icon = "fas fa-user"
+        description = """
+Здравствуйте! Меня зовут Настя, я специалист по тестированию ПО.
+
+Улучшаю качество программных продуктов более 5 лет и очень люблю свою профессию. Выполняю ручное функциональное тестирование, пишу UI-автотесты для сайтов и чат-боты на Python.
+
+   """
+    # Experience section
+    [params.experience]
+        title = "Опыт работы"
+        icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Краудтестер"
+            dates = "С сентября 2020 по настоящее время"
+            company = ""
+            link = ""
+            details = """
+
+- выполнение заданий по тестированию удобства использования сайтов на сервисах https://testbirds.com и https://uxcrowd.ru.
+   """
+        [[params.experience.list]]
+            position = "Асессор-тестировщик"
+            dates = "Март 2018 – март 2019"
+            link = "https://yandex.ru/company/"
+            company = "Яндекс"
+            details = """
+
+- регрессионное тестирование по готовым сценариям; 
+- оценка релевантности поисковой выдачи;
+- валидация входящих документов;
+- анализ проблемных организаций;
+- первичная обработка запросов в службу поддержки;
+- обработка выполненных заданий пользователей Толоки;
+- обучение и подтверждение квалификации.
+
+   """
+        [[params.experience.list]]
+            position = "Инженер по тестированию"
+            dates = "Октябрь 2015 – декабрь 2019"
+            link = "https://www.directum.ru/"
+            company = "Directum"
+            details = """
+
+Обязанности:
+- тестирование ПО на всех стадиях разработки продукта;
+- проектирование тестов и презентация их команде разработки;
+- оформление замечаний в TFS и системе баг-трекинга предприятия;
+- подготовка планов, отчетов и журналов о тестировании;
+- написание статей на wiki для пополнения базы знаний предприятия;
+- консультации сотрудников других отделов;
+- замещение тим-лида.
+
+Тестируемое ПО:
+- Prestima – система бюджетирования и управления финансами на платформе IS-Builder 5;
+- КАС «Бизнес Люкс» - система управления предприятием на платформе IS-Builder 5, включающая в себя управленческий и бухгалтерский учет;
+- Система DIRECTUM —ECM-система на платформе IS-Builder 7, выполняющая функции электронного документооборота и управления деловыми процессами;
+- DIRECTUM Intersystem Cooperation Services – инструмент, обеспечивающий обмен данными между несколькими независимыми системами DIRECTUM;
+- DIRECTUM File Storage Services – служба, позволяющая хранить тела документов в файловой системе и контролирующая доступ к ним;
+- DIRECTUM Capture and Transformation Services - набор служб, облегчающих массовый ввод документов в систему DIRECTUM и их преобразование в необходимый формат;
+- DIRECTUM Solo (iOS/Android) – мобильный клиент ECM-систем DIRECTUM и DirectumRX;
+- NOMAD - сервер, преобразующий данные БД DIRECTUM и DirectumRX для нативных мобильных приложений на платформах iOS и Android.
+   """
+        [[params.experience.list]]
+            position = "Инженер по тестированию"
+            dates = "Март 2015 – сентябрь 2015"
+            link = "http://www.cgtribe.com/"
+            company = "CG Tribe"
+            details = """
+
+Обязанности:
+- ручное функциональное тестирование по готовым сценариям;
+- работа с замечаниями в Atlassian JIRA;
+- активное взаимодействие с разработчиками на английском языке.
+
+Тестируемое ПО:
+- Omni  - desktop-клиент, система визуального представления метеорологических данных и конструирования телешоу;
+- WeatherShare, Weather Video Producer – приложения для публикации данных Omni в соцсетях;
+- Nexrad (iOS/Android) - мобильное приложение для отслеживания метеоданных. 
+   """
+
+# Portfolio section
+    
+    [params.portfolio]
+        title = "Навыки и умения"
+        icon = "fas fa-file-code"
+
+    #[params.portfolio]
+    #    title = "Навыки и умения"
+    #    icon = "fas fa-file-code"
+    #    #The order below determines the order in which the items appear in "Publications" section
+    #    format = ["title"]
+    #    #If you don't want to group publications, comment the line below by adding # at the beginning
+    #    types = ["Программирование", "Администрирование", "Web и безопасность", "Автоматизация (без боевых задач)"]
+
+        [[params.portfolio.list]]
+            position1 = "Программирование"
+            dates1 = ""
+            link1 = ""
+            company1 = ""
+            details1 = """
+- Python 3 (учебные проекты https://github.com/sckobeleva?tab=repositories);
+- ISBL (написание скриптов для генерации данных и имитации действий пользователя, тестирование функций, методов, свойств объектов).
+   """
+
+        [[params.portfolio.list]]
+            position1 = "Администрирование"
+            dates1 = ""
+            link1 = ""
+            company1 = ""
+            details1 = """
+- администрирование Windows, уверенное пользование Linux;
+- работа с БД средствами утилит MS SQL Server, написание SQL-запросов;
+- развертывание и настройка локальных веб-серверов, администрирование БД сайтов;
+- создание и администрирование виртуальных машин.
+   """
+
+        [[params.portfolio.list]]
+            position1 = "Web и безопасность"
+            dates1 = ""
+            link1 = ""
+            company1 = ""
+            details1 = """
+- Python 3 (учебные проекты https://github.com/sckobeleva?tab=repositories);
+- ISBL (написание скриптов для генерации данных и имитации действий пользователя, тестирование функций, методов, свойств объектов).
+   """
+
+        [[params.portfolio.list]]
+            position1 = "Автоматизация (без боевых задач)"
+            dates1 = ""
+            link1 = ""
+            company1 = ""
+            details1 = """
+- написание UI-автотестов, в том числе в стиле Page Object Model;
+- разработка кода в среде PyCharm;
+- использование библиотеки Selenium Webdriver;
+- составление CSS- и XPath-селекторов;
+- запись сценариев рекордером Selenium IDE; 
+- хранение кода в GitHub;
+- контроль и запуск автотестов через Pytest.
+   """
+
+
+#        [[params.portfolio.list]]
+#            #title = ""
+#            type = "Программирование"
+#            link = ""
+#            description = """
+#- Python 3 (учебные проекты https://github.com/sckobeleva?tab=repositories);
+#- ISBL (написание скриптов для генерации данных и имитации действий пользователя, тестирование функций, методов, свойств объектов).
+#   """
+
+
+    
+      
+    # Project section
+    [params.project]
+        title = "Курсы и сертификаты"
+        icon = "fas fa-book"
+
+        [[params.project.list]]
+            college2 = "Stepik"
+            dates2 = "2020"
+            #degree2 = "111"
+            #code2 = ""
+            spec2 = "Автоматизация тестирования с помощью Selenium и Python"
+            thesis_title2 = "https://stepik.org/cert/356247"
+            thesis_link2 = "https://stepik.org/cert/356247"
+
+        [[params.project.list]]
+            college2 = "Stepik"
+            dates2 = "2020"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Анализ безопасности веб-проектов"
+            thesis_title2 = "https://stepik.org/cert/808612"
+            thesis_link2 = "https://stepik.org/cert/808612"
+
+        [[params.project.list]]
+            college2 = "Stepik"
+            dates2 = "2020"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Введение в Linux"
+            thesis_title2 = "https://stepik.org/cert/823065"
+            thesis_link2 = "https://stepik.org/cert/823065"
+
+        [[params.project.list]]
+            college2 = "Software-Testing"
+            dates2 = "2020"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Программирование на Python для тестировщиков"
+            #thesis_title2 = ""
+            #thesis_link2 = ""
+
+        [[params.project.list]]
+            college2 = "Software-Testing"
+            dates2 = "2020"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Тестирование web-приложений 2.0"
+            #thesis_title2 = ""
+            #thesis_link2 = ""
+
+        [[params.project.list]]
+            college2 = "DIRECTUM"
+            dates2 = "2015"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Сертифицированный пользователь DIRECTUM"
+            #thesis_title2 = ""
+            #thesis_link2 = ""
+
+        [[params.project.list]]
+            college2 = "DIRECTUM"
+            dates2 = "2015"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Сертифицированный администратор DIRECTUM"
+            #thesis_title2 = ""
+            #thesis_link2 = "
+
+        [[params.project.list]]
+            college2 = "DIRECTUM"
+            dates2 = "2015"
+            degree2 = ""
+            #code2 = ""
+            spec2 = "Сертифицированный пользователь модуля Канцелярия системы DIRECTUM"
+            #thesis_title2 = ""
+            #thesis_link2 = ""
+
+
+# Publication section
+    [params.publication]
+        title = "Награды и достижения"
+        icon = "fas fa-certificate"
+        
+        [[params.publication.list]]
+            college1 = "DIRECTUM"
+            dates1 = "2016"
+            #degree1 = ""
+            #code1 = ""
+            spec1 = "Лучший молодой специалист"
+            #thesis_title1 = ""
+            #thesis_link1 = ""
+
+  
+# Education section
+    [params.education]
+        title = "Образование"
+        icon = "fas fa-graduation-cap"
+
+        [[params.education.list]]
+            college = "ИжГТУ им. М.Т. Калашникова"
+            dates = "2011 – 2015"
+            degree = "Реклама и Дизайн"
+            #code = ""
+            spec = "Технология промышленной и художественной обработки материалов"
+            #thesis_title = "666"
+            #thesis_link = "666"
+
+        [[params.education.list]]
+            college = "УдГУ"
+            dates = "2009 – 2014"
+            degree = "Институт нефти и газа им. М.С. Гуцериева"
+            #code = ""
+            spec = "Экономика и управление на предприятиях нефтяной и газовой промышленности"
+            #thesis_title = ""
+            #thesis_link = ""
+
+        [[params.education.list]]
+            college = "АНО ДПО Академия современного управления"
+            dates = "2013"
+            #degree = ""
+            #code = ""
+            spec = "Специалист сметного дела"
+            #thesis_title = ""
+            #thesis_link = ""
+
+
+
+# Hobby section
+    # [params.hobby]
+    #     title = "Хобби"
+    #     icon = "fas fa-futbol"
+#	
+    #     [[params.hobby.list]]
+	#	     hobby = "Футбол"
+    #     [[params.hobby.list]]
+	#	     hobby = "Настольные игры"
+
+# Skill section
+    # [params.skill]
+    #     title = "Skills"
+    #     panelId = "skill-panel"
+    #     icon = "fas fa-cogs"
+
+    #     [[params.skill.list]]
+    #         skill = "Skill 1, Skill 2"
+    #         skillrating = 90
+    #     [[params.skill.list]]
+    #         skill = "Skill 3"
+    #         skillrating = 80
+    #     [[params.skill.list]]
+    #         skill = "Skill 4"
+    #         skillrating = 50

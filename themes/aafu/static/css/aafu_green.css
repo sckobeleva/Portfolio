@@ -1,0 +1,10 @@
+:root {
+  --primaryBg: #D7EED7; /* aaf0d1 - мятный цвет, c0dcc0 - умеренно-зеленый */
+  --primaryText: black;
+  --primaryLinks: #419090; /* Заголовки и ссылки */
+  --secondaryBg: #fff; /* Фон для фото */
+  --secondaryText: black;
+  --secondaryLinks: #419090; /* Соцсети */
+  --h4Font: "Ubuntu"; /*По умолчанию Didact Gothic. Понравился Roboto Slab */
+  /*--shadow: #595659;*/
+}
